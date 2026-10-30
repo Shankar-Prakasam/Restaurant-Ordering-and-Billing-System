@@ -1,0 +1,167 @@
+:root {
+  --primary-color: #641E16;
+  --primary-hover: #4e1711;
+  --primary-light: #fbf2f0;
+  --secondary-color: #FFF8E7;
+  --accent-color: #D4A017;
+  --accent-hover: #b8860b;
+  --text-main: #252525;
+  --text-muted: #666666;
+  --bg-light: #FDFBF7;
+  --bg-card: #FFFFFF;
+  --border-color: #EBE5DF;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --shadow-sm: 0 2px 6px rgba(100, 30, 22, 0.05);
+  --shadow-md: 0 4px 16px rgba(100, 30, 22, 0.08);
+  --shadow-lg: 0 10px 30px rgba(100, 30, 22, 0.12);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--text-main);
+  background-color: var(--bg-light);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, .brand-font {
+  font-family: var(--font-serif);
+}
+
+/* Custom Buttons */
+.btn-primary-custom {
+  background-color: var(--primary-color);
+  color: #FFFFFF;
+  border: 1px solid var(--primary-color);
+  padding: 0.55rem 1.35rem;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+}
+
+.btn-primary-custom:hover, .btn-primary-custom:focus {
+  background-color: var(--primary-hover);
+  color: #FFFFFF;
+  border-color: var(--primary-hover);
+  box-shadow: 0 4px 12px rgba(100, 30, 22, 0.25);
+}
+
+.btn-outline-primary-custom {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 1.5px solid var(--primary-color);
+  padding: 0.55rem 1.35rem;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+}
+
+.btn-outline-primary-custom:hover {
+  background-color: var(--primary-color);
+  color: #FFFFFF;
+}
+
+.btn-accent-custom {
+  background-color: var(--accent-color);
+  color: #FFFFFF;
+  border: none;
+  padding: 0.55rem 1.35rem;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+}
+
+.btn-accent-custom:hover {
+  background-color: var(--accent-hover);
+  color: #FFFFFF;
+  box-shadow: 0 4px 12px rgba(212, 160, 23, 0.3);
+}
+
+/* Custom Cards */
+.custom-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.custom-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+/* Badge styling */
+.badge-available {
+  background-color: #d1e7dd;
+  color: #0f5132;
+  font-weight: 600;
+}
+.badge-reserved {
+  background-color: #cff4fc;
+  color: #055160;
+  font-weight: 600;
+}
+.badge-occupied {
+  background-color: #f8d7da;
+  color: #842029;
+  font-weight: 600;
+}
+.badge-maintenance {
+  background-color: #e2e3e5;
+  color: #41464b;
+  font-weight: 600;
+}
+
+/* Sidebar styling for dashboards */
+.dashboard-sidebar {
+  width: 260px;
+  min-height: calc(100vh - 70px);
+  background-color: #ffffff;
+  border-right: 1px solid var(--border-color);
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 18px;
+  color: #495057;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 8px;
+  margin-bottom: 4px;
+  transition: all 0.2s ease;
+}
+
+.sidebar-link:hover {
+  background-color: var(--primary-light);
+  color: var(--primary-color);
+}
+
+.sidebar-link.active {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+.sidebar-link i {
+  font-size: 1.15rem;
+}
+
+/* Invoice print format */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  body {
+    background-color: #ffffff;
+  }
+  .invoice-box {
+    box-shadow: none !important;
+    border: none !important;
+  }
+}

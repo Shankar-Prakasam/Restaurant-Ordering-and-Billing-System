@@ -1,0 +1,33 @@
+{
+  "name": "restaurant-billing-system-server",
+  "version": "1.0.0",
+  "description": "Backend API for Restaurant Ordering and Billing System",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "seed": "node scripts/seed.js",
+    "test": "jest --runInBand --detectOpenHandles --forceExit"
+  },
+  "keywords": ["restaurant", "ordering", "billing", "express", "mongodb"],
+  "author": "SEAP Team",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.3.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.5.1",
+    "qrcode": "^1.5.3"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testTimeout": 30000
+  }
+}

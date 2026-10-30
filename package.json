@@ -1,0 +1,22 @@
+{
+  "name": "restaurant-ordering-and-billing-system",
+  "version": "1.0.0",
+  "description": "Full-Stack Restaurant Ordering and Billing System with React, Express, MongoDB Atlas, and JWT",
+  "scripts": {
+    "install:server": "cd server && npm install",
+    "install:client": "cd client && npm install",
+    "seed": "cd server && npm run seed",
+    "test:server": "cd server && npm test",
+    "build:client": "cd client && npm run build"
+  },
+  "keywords": [
+    "restaurant-management",
+    "table-booking",
+    "pos",
+    "billing-system",
+    "mern-stack",
+    "seap-project"
+  ],
+  "author": "SEAP Engineering Team",
+  "license": "MIT"
+}
